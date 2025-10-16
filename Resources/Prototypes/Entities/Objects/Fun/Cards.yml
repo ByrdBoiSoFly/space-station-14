@@ -1,0 +1,35 @@
+- type: entity
+  parent: BaseItem
+  id: CardAceSpades
+  name: ace of spades
+  description: The highest card in the deck. A true classic.
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/playingcards.rsi
+    state: "card_back"
+    scale: 0.5, 0.5
+  - type: Item
+    size: Tiny
+  - type: Appearance
+  - type: CardFlip
+  - type: ItemSwitch
+    state: back
+    states:
+      back: !type:ItemSwitchState
+        verb: "Flip Face-Down"
+        soundStateActivate: /Audio/Effects/card_flip.ogg
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "card_back"
+        components:
+        - type: Appearance
+          visuals:
+          - type: CardFlipVisualizer
+            frontState: "ace_spades"
+            backState: "card_back"
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Effects/card_flip.ogg
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "ace_spades"
