@@ -13,6 +13,7 @@ using Content.Shared.Wieldable;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Starlight.ItemSwitch;
 public abstract class SharedItemSwitchSystem : EntitySystem
@@ -22,6 +23,7 @@ public abstract class SharedItemSwitchSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedItemSystem _item = default!;
+    [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly ClothingSystem _clothing = default!;
 
     private EntityQuery<ItemSwitchComponent> _query;
@@ -181,8 +183,11 @@ public abstract class SharedItemSwitchSystem : EntitySystem
     }
     protected virtual void UpdateVisuals(Entity<ItemSwitchComponent> ent, string key)
     {
-        if (TryComp(ent, out AppearanceComponent? appearance))
-            _appearance.SetData(ent, SwitchableVisuals.Switched, key, appearance);
+        if (ent.Comp.States.TryGetValue(key, out var state))
+        {
+            _metaData.SetEntityName(ent, state.Name ?? MetaData(ent).EntityName);
+            _metaData.SetEntityDescription(ent, state.Description ?? MetaData(ent).EntityDescription);
+        }
         _item.SetHeldPrefix(ent, key);
 
         VisualsChanged(ent, key);

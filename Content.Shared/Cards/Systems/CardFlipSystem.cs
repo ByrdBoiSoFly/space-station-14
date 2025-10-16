@@ -28,5 +28,6 @@ public sealed partial class SharedCardFlipSystem : EntitySystem
         if (!TryComp<AppearanceComponent>(uid, out var appearance))
             return;
         _appearance.SetData(uid, CardFlipVisuals.State, state);
+        
     }
 }

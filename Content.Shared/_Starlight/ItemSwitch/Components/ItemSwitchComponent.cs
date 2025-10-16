@@ -47,6 +47,12 @@ public sealed partial class ItemSwitchState : BoundUserInterfaceMessage
     public string Verb;
 
     [DataField]
+    public string? Name;
+
+    [DataField]
+    public string? Description;
+
+    [DataField]
     public SoundSpecifier? SoundStateActivate;
 
     [DataField]
