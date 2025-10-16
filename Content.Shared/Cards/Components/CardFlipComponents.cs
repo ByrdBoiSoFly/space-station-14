@@ -1,25 +1,12 @@
-using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
-using Robust.Shared.Prototypes;
 
-namespace Content.Shared.Cards;
+namespace Content.Shared.Cards.Components;
 
-[RegisterComponent, NetworkedComponent, Access(typeof(SharedCardFlipSystem))]
-[AutoGenerateComponentState(true)]
+/// <summary>
+/// This is a marker component that identifies an entity as being "flippable",
+/// like a card. It relies on ItemSwitchComponent to handle the actual state logic.
+/// </summary>
+[RegisterComponent, NetworkedComponent]
 public sealed partial class CardFlipComponent : Component
 {
-    // Is the card currently flipped face-down?
-    [DataField("flipped"), AutoNetworkedField]
-    public bool Flipped { get; set; } = false;
-
-    // The sprite state to use when the card is face-up.
-    [DataField("frontState", required: true)]
-    public string FrontState { get; private set; } = default!;
-
-    // The sprite state to use when the card is face-down.
-    [DataField("backState", required: true)]
-    public string BackState { get; private set; } = default!;
-
-    [DataField("flipSound")]
-    public SoundSpecifier FlipSound { get; private set; } = new SoundPathSpecifier("/Audio/Item/Cards/card-flip.ogg");
 }
