@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseItem
+  id: CardAceSpades
+  name: ace of spades
+  description: The highest card in the deck. A true classic.
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/playingcards.rsi
+    # The card will spawn face-up, using this state.
+    state: "ace_spades"
+    scale: 0.5, 0.5
+    layers:
+    - state: "ace_spades"
+      map: ["enum.CardFlipVisuals.State"]
+  - type: Item
+    size: Tiny
+  - type: Appearance
+  - type: CardFlip
+    frontState: "ace_spades"
+    backState: "card_back"
