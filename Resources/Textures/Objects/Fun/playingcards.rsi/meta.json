@@ -8,10 +8,169 @@
   },
   "states": [
     {
-      "name": "ace_spades"
+      "name": "CardAceClubs"
     },
     {
-      "name": "card_back"
+      "name": "CardAceDiamonds"
+    },
+    {
+      "name": "CardAceHearts"
+    },
+    {
+      "name": "CardAceSpades"
+    },
+    {
+      "name": "CardBack"
+    },
+    {
+      "name": "CardEightClubs"
+    },
+    {
+      "name": "CardEightDiamonds"
+    },
+    {
+      "name": "CardEightHearts"
+    },
+    {
+      "name": "CardEightSpades"
+    },
+    {
+      "name": "CardFiveClubs"
+    },
+    {
+      "name": "CardFiveDiamonds"
+    },
+    {
+      "name": "CardFiveHearts"
+    },
+    {
+      "name": "CardFiveSpades"
+    },
+    {
+      "name": "CardFourClubs"
+    },
+    {
+      "name": "CardFourDiamonds"
+    },
+    {
+      "name": "CardFourHearts"
+    },
+    {
+      "name": "CardFourSpades"
+    },
+    {
+      "name": "CardJackClubs"
+    },
+    {
+      "name": "CardJackDiamonds"
+    },
+    {
+      "name": "CardJackHearts"
+    },
+    {
+      "name": "CardJackSpades"
+    },
+    {
+      "name": "CardJoker"
+    },
+    {
+      "name": "CardKingClubs"
+    },
+    {
+      "name": "CardKingDiamonds"
+    },
+    {
+      "name": "CardKingHearts"
+    },
+    {
+      "name": "CardKingSpades"
+    },
+    {
+      "name": "CardNineClubs"
+    },
+    {
+      "name": "CardNineDiamonds"
+    },
+    {
+      "name": "CardNineHearts"
+    },
+    {
+      "name": "CardNineSpades"
+    },
+    {
+      "name": "CardQueenClubs"
+    },
+    {
+      "name": "CardQueenDiamonds"
+    },
+    {
+      "name": "CardQueenHearts"
+    },
+    {
+      "name": "CardQueenSpades"
+    },
+    {
+      "name": "CardSevenClubs"
+    },
+    {
+      "name": "CardSevenDiamonds"
+    },
+    {
+      "name": "CardSevenHearts"
+    },
+    {
+      "name": "CardSevenSpades"
+    },
+    {
+      "name": "CardSixClubs"
+    },
+    {
+      "name": "CardSixDiamonds"
+    },
+    {
+      "name": "CardSixHearts"
+    },
+    {
+      "name": "CardSixSpades"
+    },
+    {
+      "name": "CardTenClubs"
+    },
+    {
+      "name": "CardTenDiamonds"
+    },
+    {
+      "name": "CardTenHearts"
+    },
+    {
+      "name": "CardTenSpades"
+    },
+    {
+      "name": "CardThreeClubs"
+    },
+    {
+      "name": "CardThreeDiamonds"
+    },
+    {
+      "name": "CardThreeHearts"
+    },
+    {
+      "name": "CardThreeSpades"
+    },
+    {
+      "name": "CardTwoClubs"
+    },
+    {
+      "name": "CardTwoDiamonds"
+    },
+    {
+      "name": "CardTwoHearts"
+    },
+    {
+      "name": "CardTwoSpades"
+    },
+    {
+      "name": "deck"
     }
   ]
 }

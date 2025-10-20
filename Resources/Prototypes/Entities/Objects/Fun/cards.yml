@@ -1,12 +1,12 @@
 - type: entity
-  parent: BaseItem
-  id: CardAceSpades
-  name: playing card
+  abstract: true
+  id: BasePlayingCard
+  name: Playing Card
   description: A playing card. What could it be?
   components:
   - type: Sprite
     sprite: Objects/Fun/playingcards.rsi
-    state: "card_back"
+    state: "cardback"
     scale: 0.5, 0.5
   - type: Item
     size: Tiny
@@ -22,18 +22,916 @@
         soundStateActivate: /Audio/Items/Cards/card_flip.ogg
         sprite:
           sprite: Objects/Fun/playingcards.rsi
-          state: "card_back"
+          state: "cardback"
         components:
         - type: Appearance
           visuals:
           - type: CardFlipVisualizer
-            frontState: "ace_spades"
-            backState: "card_back"
+            backState: "cardback"
+      # The 'front' state must be fully defined by inheriting entities
+
+### Spades
+- type: entity
+  parent: BasePlayingCard
+  id: CardAceSpades
+  name: Ace of Spades
+  description: The highest card in the deck. A true classic.
+  components:
+  - type: ItemSwitch
+    states:
       front: !type:ItemSwitchState
         verb: "Flip Face-Up"
         soundStateActivate: /Audio/Items/Cards/card_flip.ogg
-        name: ace of spades
-        description: The higest card in the deck. A true classic.
+        name: Ace of Spades
+        description: The highest card in the deck. A true classic.
         sprite:
           sprite: Objects/Fun/playingcards.rsi
-          state: "ace_spades"
+          state: "CardAceSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardKingSpades
+  name: King of Spades
+  description: A wise and authoritative ruler, robed in shadow.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: King of Spades
+        description: A wise and authoritative ruler, robed in shadow.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardKingSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardQueenSpades
+  name: Queen of Spades
+  description: A symbol of intelligence, judgment, and perception.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Queen of Spades
+        description: A symbol of intelligence, judgment, and perception.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardQueenSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardJackSpades
+  name: Jack of Spades
+  description: A noble warrior, ever ready for the call to battle.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Jack of Spades
+        description: A noble warrior, ever ready for the call to battle.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardJackSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTenSpades
+  name: Ten of Spades
+  description: A perfect ten, sharp and to the point.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Ten of Spades
+        description: A perfect ten, sharp and to the point.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTenSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardNineSpades
+  name: Nine of Spades
+  description: Nine blades aligned in formation.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Nine of Spades
+        description: Nine blades aligned in formation.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardNineSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardEightSpades
+  name: Eight of Spades
+  description: Eight paths to a single, sharp conclusion.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Eight of Spades
+        description: Eight paths to a single, sharp conclusion.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardEightSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSevenSpades
+  name: Seven of Spades
+  description: A fortunate number, though edged with caution.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Seven of Spades
+        description: A fortunate number, though edged with caution.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSevenSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSixSpades
+  name: Six of Spades
+  description: Balance and harmony, found in the shadow of a spade.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Six of Spades
+        description: Balance and harmony, found in the shadow of a spade.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSixSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFiveSpades
+  name: Five of Spades
+  description: Five points of intellectual conflict.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Five of Spades
+        description: Five points of intellectual conflict.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFiveSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFourSpades
+  name: Four of Spades
+  description: A stable foundation, built with sharp resolve.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Four of Spades
+        description: A stable foundation, built with sharp resolve.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFourSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardThreeSpades
+  name: Three of Spades
+  description: A trinity of pointed truths.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Three of Spades
+        description: A trinity of pointed truths.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardThreeSpades"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTwoSpades
+  name: Two of Spades
+  description: The smallest spade, but no less sharp.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Two of Spades
+        description: The smallest spade, but no less sharp.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTwoSpades"
+
+### Hearts
+- type: entity
+  parent: BasePlayingCard
+  id: CardAceHearts
+  name: Ace of Hearts
+  description: The purest symbol of love and emotion.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Ace of Hearts
+        description: The purest symbol of love and emotion.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardAceHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardKingHearts
+  name: King of Hearts
+  description: A kind and compassionate ruler, leading with his heart.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: King of Hearts
+        description: A kind and compassionate ruler, leading with his heart.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardKingHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardQueenHearts
+  name: Queen of Hearts
+  description: A beacon of warmth, beauty, and emotional understanding.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Queen of Hearts
+        description: A beacon of warmth, beauty, and emotional understanding.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardQueenHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardJackHearts
+  name: Jack of Hearts
+  description: A romantic and charming figure, driven by passion.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Jack of Hearts
+        description: A romantic and charming figure, driven by passion.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardJackHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTenHearts
+  name: Ten of Hearts
+  description: An overflowing of joy and emotional fulfillment.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Ten of Hearts
+        description: An overflowing of joy and emotional fulfillment.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTenHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardNineHearts
+  name: Nine of Hearts
+  description: A wish granted, a dream come true.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Nine of Hearts
+        description: A wish granted, a dream come true.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardNineHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardEightHearts
+  name: Eight of Hearts
+  description: Eight expressions of heartfelt emotion.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Eight of Hearts
+        description: Eight expressions of heartfelt emotion.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardEightHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSevenHearts
+  name: Seven of Hearts
+  description: A card of choices, led by the heart's desire.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Seven of Hearts
+        description: A card of choices, led by the heart's desire.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSevenHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSixHearts
+  name: Six of Hearts
+  description: Childhood memories and sweet nostalgia.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Six of Hearts
+        description: Childhood memories and sweet nostalgia.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSixHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFiveHearts
+  name: Five of Hearts
+  description: A minor heartbreak, a lesson learned.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Five of Hearts
+        description: A minor heartbreak, a lesson learned.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFiveHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFourHearts
+  name: Four of Hearts
+  description: A stable and loving emotional foundation.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Four of Hearts
+        description: A stable and loving emotional foundation.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFourHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardThreeHearts
+  name: Three of Hearts
+  description: A celebration of friendship and shared joy.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Three of Hearts
+        description: A celebration of friendship and shared joy.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardThreeHearts"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTwoHearts
+  name: Two of Hearts
+  description: A deep and meaningful connection between two souls.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Two of Hearts
+        description: A deep and meaningful connection between two souls.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTwoHearts"
+
+### Diamonds
+- type: entity
+  parent: BasePlayingCard
+  id: CardAceDiamonds
+  name: Ace of Diamonds
+  description: A seed of prosperity, a new opportunity for wealth.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Ace of Diamonds
+        description: A seed of prosperity, a new opportunity for wealth.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardAceDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardKingDiamonds
+  name: King of Diamonds
+  description: A shrewd and successful leader, a master of his domain.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: King of Diamonds
+        description: A shrewd and successful leader, a master of his domain.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardKingDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardQueenDiamonds
+  name: Queen of Diamonds
+  description: A practical and generous figure, radiating elegance.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Queen of Diamonds
+        description: A practical and generous figure, radiating elegance.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardQueenDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardJackDiamonds
+  name: Jack of Diamonds
+  description: An ambitious and hardworking individual, focused on their goals.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Jack of Diamonds
+        description: An ambitious and hardworking individual, focused on their goals.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardJackDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTenDiamonds
+  name: Ten of Diamonds
+  description: The peak of material success and financial security.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Ten of Diamonds
+        description: The peak of material success and financial security.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTenDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardNineDiamonds
+  name: Nine of Diamonds
+  description: Independence and self-reliance paying off.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Nine of Diamonds
+        description: Independence and self-reliance paying off.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardNineDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardEightDiamonds
+  name: Eight of Diamonds
+  description: Skill and dedication applied to a craft.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Eight of Diamonds
+        description: Skill and dedication applied to a craft.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardEightDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSevenDiamonds
+  name: Seven of Diamonds
+  description: A moment to pause and assess the long-term rewards.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Seven of Diamonds
+        description: A moment to pause and assess the long-term rewards.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSevenDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSixDiamonds
+  name: Six of Diamonds
+  description: A card of generosity, of giving and receiving.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Six of Diamonds
+        description: A card of generosity, of giving and receiving.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSixDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFiveDiamonds
+  name: Five of Diamonds
+  description: A period of hardship, a reminder to be prudent.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Five of Diamonds
+        description: A period of hardship, a reminder to be prudent.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFiveDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFourDiamonds
+  name: Four of Diamonds
+  description: A solid and secure financial foundation.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Four of Diamonds
+        description: A solid and secure financial foundation.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFourDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardThreeDiamonds
+  name: Three of Diamonds
+  description: Meaningful work and collaboration.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Three of Diamonds
+        description: Meaningful work and collaboration.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardThreeDiamonds"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTwoDiamonds
+  name: Two of Diamonds
+  description: Balancing the books and juggling priorities.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Two of Diamonds
+        description: Balancing the books and juggling priorities.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTwoDiamonds"
+
+### Clubs
+- type: entity
+  parent: BasePlayingCard
+  id: CardAceClubs
+  name: Ace of Clubs
+  description: A spark of inspiration, the beginning of a great idea.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Ace of Clubs
+        description: A spark of inspiration, the beginning of a great idea.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardAceClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardKingClubs
+  name: King of Clubs
+  description: A charismatic and visionary leader, born to create.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: King of Clubs
+        description: A charismatic and visionary leader, born to create.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardKingClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardQueenClubs
+  name: Queen of Clubs
+  description: An energetic and confident figure, full of creative fire.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Queen of Clubs
+        description: An energetic and confident figure, full of creative fire.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardQueenClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardJackClubs
+  name: Jack of Clubs
+  description: A loyal and enthusiastic apprentice, eager to learn.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Jack of Clubs
+        description: A loyal and enthusiastic apprentice, eager to learn.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardJackClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTenClubs
+  name: Ten of Clubs
+  description: The burden of responsibility, the final push to success.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Ten of Clubs
+        description: The burden of responsibility, the final push to success.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTenClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardNineClubs
+  name: Nine of Clubs
+  description: Resilience and perseverance in the face of challenges.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Nine of Clubs
+        description: Resilience and perseverance in the face of challenges.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardNineClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardEightClubs
+  name: Eight of Clubs
+  description: Swift action and rapid progress.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Eight of Clubs
+        description: Swift action and rapid progress.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardEightClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSevenClubs
+  name: Seven of Clubs
+  description: Standing your ground, defending your position.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Seven of Clubs
+        description: Standing your ground, defending your position.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSevenClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardSixClubs
+  name: Six of Clubs
+  description: A victory won, a moment of public recognition.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Six of Clubs
+        description: A victory won, a moment of public recognition.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardSixClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFiveClubs
+  name: Five of Clubs
+  description: Competition and minor disagreements.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Five of Clubs
+        description: Competition and minor disagreements.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFiveClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardFourClubs
+  name: Four of Clubs
+  description: A time of peace and harmony, a stable home.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Four of Clubs
+        description: A time of peace and harmony, a stable home.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardFourClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardThreeClubs
+  name: Three of Clubs
+  description: The fruits of initial efforts, successful teamwork.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Three of Clubs
+        description: The fruits of initial efforts, successful teamwork.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardThreeClubs"
+
+- type: entity
+  parent: BasePlayingCard
+  id: CardTwoClubs
+  name: Two of Clubs
+  description: A crossroads, a decision to be made.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Two of Clubs
+        description: A crossroads, a decision to be made.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardTwoClubs"
+
+### Joker
+- type: entity
+  parent: BasePlayingCard
+  id: CardJoker
+  name: Joker
+  description: The wild card. A symbol of chaos, oppurtunity, and endless possibility.
+  components:
+  - type: ItemSwitch
+    states:
+      front: !type:ItemSwitchState
+        verb: "Flip Face-Up"
+        soundStateActivate: /Audio/Items/Cards/card_flip.ogg
+        name: Joker
+        description: The wild card. A symbol of chaos, oppurtunity, and endless possibility.
+        sprite:
+          sprite: Objects/Fun/playingcards.rsi
+          state: "CardJoker"
