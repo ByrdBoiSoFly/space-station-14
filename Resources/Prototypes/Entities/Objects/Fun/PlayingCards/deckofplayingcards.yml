@@ -1,0 +1,72 @@
+- type: entity
+  abstract: true
+  id: BasePlayingCardDeck
+  name: Playing Card Deck
+  description: A deck of playing cards. Shuffle up!
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/playingcards.rsi
+    state: "deck"
+    scale: 0.5, 0.5
+  - type: Item
+    size: Small
+  - type: Storage
+    capacity: 53
+  - type: RandomCardSpawner
+    lastPrototype: true
+    prototypes:
+    - CardAceSpades
+    - CardKingSpades
+    - CardQueenSpades
+    - CardJackSpades
+    - CardTenSpades
+    - CardNineSpades
+    - CardEightSpades
+    - CardSevenSpades
+    - CardSixSpades
+    - CardFiveSpades
+    - CardFourSpades
+    - CardThreeSpades
+    - CardTwoSpades
+    - CardAceHearts
+    - CardKingHearts
+    - CardQueenHearts
+    - CardJackHearts
+    - CardTenHearts
+    - CardNineHearts
+    - CardEightHearts
+    - CardSevenHearts
+    - CardSixHearts
+    - CardFiveHearts
+    - CardFourHearts
+    - CardThreeHearts
+    - CardTwoHearts
+    - CardAceDiamonds
+    - CardKingDiamonds
+    - CardQueenDiamonds
+    - CardJackDiamonds
+    - CardTenDiamonds
+    - CardNineDiamonds
+    - CardEightDiamonds
+    - CardSevenDiamonds
+    - CardSixDiamonds
+    - CardFiveDiamonds
+    - CardFourDiamonds
+    - CardThreeDiamonds
+    - CardTwoDiamonds
+    - CardAceClubs
+    - CardKingClubs
+    - CardQueenClubs
+    - CardJackClubs
+    - CardTenClubs
+    - CardNineClubs
+    - CardEightClubs
+    - CardSevenClubs
+    - CardSixClubs
+    - CardFiveClubs
+    - CardFourClubs
+    - CardThreeClubs
+    - CardTwoClubs
+    - CardJoker
+  - type: UseDelay
+    delay: 0.5

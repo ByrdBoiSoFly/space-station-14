@@ -1,5 +1,6 @@
 - type: entity
   abstract: true
+  parent: BaseItem
   id: BasePlayingCard
   name: Playing Card
   description: A playing card. What could it be?
