@@ -11,7 +11,13 @@
   maleFirstNames: NamesReptilianMale # Placeholder, consider creating NamesAqueanMale
   femaleFirstNames: NamesReptilianFemale # Placeholder, consider creating NamesAqueanFemale
   naming: FirstDashFirst
+  actions:
+  - JumpAquean
+  - ActionAqueanStickyTongue
   customName: true
+  components:
+  - type: InteractionPopup
+    interactionDistance: 1.75
 
 - type: speciesBaseSprites
   id: MobAqueanSprites

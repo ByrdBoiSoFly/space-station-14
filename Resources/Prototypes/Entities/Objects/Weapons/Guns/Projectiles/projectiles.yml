@@ -1345,3 +1345,42 @@
     proto: BulletDisablerSmg
     count: 3 #bit stronger than a disabler if you hit your shots you goober, still not a 2 hit stun though
     spread: 9
+
+# Starlight-start: Aquean Ability
+- type: entity
+  id: AqueanStickyTongue
+  name: sticky tongue
+  noSpawn: true
+  components:
+    - type: EmbeddableProjectile
+      deleteOnRemove: true
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Sprite
+      noRot: false
+      sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi
+      layers:
+        - state: hook
+          color: "#a22323" # A reddish color for the tongue
+    - type: Physics
+      bodyType: Dynamic
+      linearDamping: 0
+      angularDamping: 0
+    - type: Projectile
+      deleteOnCollide: false
+      damage:
+        types:
+          Blunt: 0
+    - type: Fixtures
+      fixtures:
+        projectile:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.1,-0.1,0.1,0.1"
+          hard: false
+          mask:
+            - Impassable
+            - HighImpassable
+    - type: AqueanStickyTongue
+    - type: GrapplingProjectile # So it can be reeled in
+#Starlight-end

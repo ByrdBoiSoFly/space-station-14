@@ -85,3 +85,20 @@
       toPointer: false
       sound:
         path: /Audio/_Starlight/Effects/Jump/jetpack.ogg
+
+- type: entity
+  parent: Jump
+  id: JumpAquean
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 5
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Starlight/Actions/resomi.rsi
+      state: jump
+  - type: WorldTargetAction
+    event: !type:JumpActionEvent
+      distance: 3.5
+      sound:
+        path: /Audio/_Starlight/Effects/Jump/resomi.ogg

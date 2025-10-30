@@ -1,0 +1,20 @@
+- type: entity
+  id: ActionAqueanStickyTongue
+  name: Sticky Tongue
+  description: Launch your tongue at a target to pull it towards you, or to pull yourself towards it.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    useDelay: 10
+    icon:
+      sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi
+      state: icon
+    event: !type:TargetInFrontAction
+      distance: 4
+      projectiles:
+      - AqueanStickyTongue
+      sound:
+        path: /Audio/Items/hiss.ogg
+        params:
+          volume: -2
